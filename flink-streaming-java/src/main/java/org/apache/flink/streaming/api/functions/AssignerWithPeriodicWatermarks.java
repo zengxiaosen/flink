@@ -50,6 +50,13 @@ import javax.annotation.Nullable;
  *
  * @see org.apache.flink.streaming.api.watermark.Watermark
  */
+
+/**
+ * AssignerWithPeriodicWatermarks继承了TimestampAssigner接口（定义了extractTimestamp方法）
+ * 这里定义getCurrentWatermark方法，该方法会被周期性调用返回current watermark
+ * 如果没有的话，返回null
+ * @param <T>
+ */
 public interface AssignerWithPeriodicWatermarks<T> extends TimestampAssigner<T> {
 
 	/**

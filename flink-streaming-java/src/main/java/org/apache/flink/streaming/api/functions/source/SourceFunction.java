@@ -230,6 +230,7 @@ public interface SourceFunction<T> extends Function, Serializable {
 		 * @param element The element to emit
 		 * @param timestamp The timestamp in milliseconds since the Epoch
 		 */
+		//用来assign event timestamp
 		@PublicEvolving
 		void collectWithTimestamp(T element, long timestamp);
 
@@ -245,6 +246,7 @@ public interface SourceFunction<T> extends Function, Serializable {
 		 *
 		 * @param mark The Watermark to emit
 		 */
+		//用来emit watermark
 		@PublicEvolving
 		void emitWatermark(Watermark mark);
 

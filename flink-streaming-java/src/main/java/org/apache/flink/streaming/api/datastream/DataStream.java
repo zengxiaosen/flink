@@ -880,6 +880,7 @@ public class DataStream<T> {
 	 * @see AssignerWithPunctuatedWatermarks
 	 * @see #assignTimestampsAndWatermarks(AssignerWithPunctuatedWatermarks)
 	 */
+	//用来在source外头设置timestampAndWatermarkAssigner
 	public SingleOutputStreamOperator<T> assignTimestampsAndWatermarks(
 			AssignerWithPeriodicWatermarks<T> timestampAndWatermarkAssigner) {
 
